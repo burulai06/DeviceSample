@@ -1,16 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.demo13.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
-
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<AnchorPane xmlns="http://javafx.com/javafx/23.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo13.HelloController">
+    <children>
+        <TabPane layoutX="10.0" layoutY="10.0" prefHeight="380.0" prefWidth="580.0">
+            <tabs>
+                <Tab text="Smartphone">
+                    <AnchorPane>
+                        <children>
+                            <Label layoutX="20.0" layoutY="20.0" text="Name:" />
+                            <TextField fx:id="textNameSmartphone" layoutX="100.0" layoutY="20.0" />
+                            <Label layoutX="20.0" layoutY="60.0" text="Price:" />
+                            <TextField fx:id="textPriceSmartphone" layoutX="100.0" layoutY="60.0" />
+                            <Label layoutX="20.0" layoutY="100.0" text="Weight:" />
+                            <TextField fx:id="textWeightSmartphone" layoutX="100.0" layoutY="100.0" />
+                            <Label layoutX="20.0" layoutY="140.0" text="Screen Size:" />
+                            <TextField fx:id="textScreenSize" layoutX="100.0" layoutY="140.0" />
+                            <Label layoutX="20.0" layoutY="180.0" text="Camera Resolution:" />
+                            <TextField fx:id="textCameraResolution" layoutX="100.0" layoutY="180.0" />
+                        </children>
+                    </AnchorPane>
+                </Tab>
+                <Tab text="Laptop">
+                    <AnchorPane>
+                        <children>
+                            <Label layoutX="20.0" layoutY="20.0" text="Name:" />
+                            <TextField fx:id="textNameLaptop" layoutX="100.0" layoutY="20.0" />
+                            <Label layoutX="20.0" layoutY="60.0" text="Price:" />
+                            <TextField fx:id="textPriceLaptop" layoutX="100.0" layoutY="60.0" />
+                            <Label layoutX="20.0" layoutY="100.0" text="Weight:" />
+                            <TextField fx:id="textWeightLaptop" layoutX="100.0" layoutY="100.0" />
+                            <Label layoutX="20.0" layoutY="140.0" text="RAM Size:" />
+                            <TextField fx:id="textRamSize" layoutX="100.0" layoutY="140.0" />
+                            <Label layoutX="20.0" layoutY="180.0" text="Processor Type:" />
+                            <TextField fx:id="textProcessorType" layoutX="100.0" layoutY="180.0" />
+                        </children>
+                    </AnchorPane>
+                </Tab>
+                <Tab text="Tablet">
+                    <AnchorPane>
+                        <children>
+                            <Label layoutX="20.0" layoutY="20.0" text="Name:" />
+                            <TextField fx:id="textNameTablet" layoutX="100.0" layoutY="20.0" />
+                            <Label layoutX="20.0" layoutY="60.0" text="Price:" />
+                            <TextField fx:id="textPriceTablet" layoutX="100.0" layoutY="60.0" />
+                            <Label layoutX="20.0" layoutY="100.0" text="Weight:" />
+                            <TextField fx:id="textWeightTablet" layoutX="100.0" layoutY="100.0" />
+                            <Label layoutX="20.0" layoutY="140.0" text="Battery Life:" />
+                            <TextField fx:id="textBatteryLife" layoutX="100.0" layoutY="140.0" />
+                            <Label layoutX="20.0" layoutY="180.0" text="Has Stylus:" />
+                            <TextField fx:id="textHasStylus" layoutX="100.0" layoutY="180.0" />
+                        </children>
+                    </AnchorPane>
+                </Tab>
+            </tabs>
+        </TabPane>
+        <ListView fx:id="listView" layoutX="15.0" layoutY="300.0" prefHeight="100.0" prefWidth="570.0" />
+        <Button layoutX="15.0" layoutY="410.0" text="Add Device" onAction="#onAddClick" />
+        <Button layoutX="115.0" layoutY="410.0" text="Remove Device" onAction="#onRemoveClick" />
+        <Label fx:id="label" layoutX="215.0" layoutY="410.0" text="Messages will appear here." />
+    </children>
+</AnchorPane>
